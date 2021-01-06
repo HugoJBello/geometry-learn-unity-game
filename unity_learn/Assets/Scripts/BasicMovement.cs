@@ -6,7 +6,12 @@ public class BasicMovement : MonoBehaviour
 {
     public bool isDragging;
     public bool enters;
+    public string type;
+    public Vector2 initialPosition;
 
+    private void Start() {
+       initialPosition = transform.position;
+    }
     private void OnMouseUp() {
         isDragging = false;
 
